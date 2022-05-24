@@ -6,11 +6,11 @@
 
   * const, unchangable once declared, but the element inside the object can be changed
 
-    ```javascript
-    const A = [1,2,3];
-    s = [2,3,4]; //report error
-    s[2] = 4; //become [1,2,4];
-    ```
+  ```javascript
+  const A = [1,2,3];
+  s = [2,3,4]; //report error
+  s[2] = 4; //become [1,2,4];
+  ```
   * To prevent object mutation, use `Object.freeze` to proceed.
 
   ```javascript
@@ -106,5 +106,41 @@
   //import
   import {add} from './math_functions.js';
   import * as myMythModule from './math_functions.js';
+  //export default
+  export default function add(x, y) {
+    return x + y;
+  }
+  //import a default export
+  import add from "./math_functions.js";
   ```
+4. Promise
+  The most significant feature introduced in ES6. You use it to make a promise to do something, usually asynchronously. Whne the task completes, you either fulfill your promise or failed to do so. Resolve or reject.
+  ```javascript
+  const myPromise = new Promise((resolve,reject) =>{
+
+  });
+  ```
+  A promise has 3 states: pending, fulfilled and rejected. user resolve() and reject() for states update.
+  ```javascript
+  const myPromise = new Promise((resolve,reject) =>{
+    if(condition){
+      resolve("Promise was fulfilled");
+    } else{
+      reject("Promise was rejected");
+    }
+  })
+  ```
+  `then` is a keyword used in promise, the `then` method is executed immediately after the promise is fufilled with resolve.
+  ```javascript
+  myPromise.then(result =>{
+
+  });
+  ```
+  `catch` is a keyword used in promise, the `catch` method is executed immediately after the promise is rejected with reject.
+  ```javascript
+  myPromise.catch(error =>{
+
+  });
+  ```
+
 
