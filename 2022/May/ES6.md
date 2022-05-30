@@ -28,7 +28,7 @@
   myFunction2('CDE'); // write Hello CDE
   ```
 
-  * Rest Parameter `...`, this is an important feature in ES6. Ususally when we use rest parameter, the input is array.
+  * Rest/Spread Parameter `...`, this is an important feature in ES6. Ususally when we use rest parameter, the input is array.
 
   ```javascript
   function howMany(...args) {
@@ -142,5 +142,10 @@
 
   });
   ```
-
+5. Spread Operator in array
+  ```javascript
+  let thisArray = ['A',2,3,4,5,'C'];
+  let thatArray = [...thisArray]
+  let thirdArray = [1,2,...thisArray,'D'] //[1,2,'A',2,3,4,5,'C','D']
+  ```
 
