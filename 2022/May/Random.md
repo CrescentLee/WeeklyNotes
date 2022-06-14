@@ -14,3 +14,9 @@ Normally random notes
     console.log(Math.max(...array1));
     // expected output: 3
    ```
+2. Copy array
+   ```javascript
+   let arrCopy = [...arrOriginal];
+   ```
+3. Array functions, review this [question](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/use-the-reduce-method-to-analyze-data) to recall functions: filter, map, reduce.
+4.
